@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Ekanola Adewole - get in touch for collaborations, projects, or questions." />
+  <title>Contact | Ekanola Adewole</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">EA<span>.</span></a>
+        <button class="hamburger" aria-expanded="false">&#9776;</button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Get In Touch</h1>
+      <p>Have a question, a project idea, or just want to say hi? I'd love to hear from you.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+
+          <aside class="contact-info reveal">
+            <h2>Let's Connect</h2>
+            <p>
+              I'm always open to discussing new projects, creative ideas, or opportunities
+              to learn and grow together. Drop me a message using the form, or reach out
+              through any of the channels below.
+            </p>
+
+            <div class="contact-detail">
+              <div class="contact-icon">&#9993;</div>
+              <div>
+                <strong>Email</strong><br />
+                <a href="mailto:a.ekanola2618@miva.edu.ng" style="color: var(--cream);">
+                  a.ekanola2618@miva.edu.ng
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">&#128222;</div>
+              <div>
+                <strong>Phone</strong><br />
+                <a href="tel:08121751210" style="color: var(--cream);">
+                  08121751210
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">&#127757;</div>
+              <div>
+                <strong>Location</strong><br />
+                Lagos, Nigeria
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">&#128187;</div>
+              <div>
+                <strong>GitHub</strong><br />
+                <a href="https://github.com/woleEkanola" target="_blank" rel="noopener" style="color: var(--cream);">
+                  github.com/woleEkanola
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">&#128279;</div>
+              <div>
+                <strong>LinkedIn</strong><br />
+                <a href="https://linkedin.com/in/woleekanola" target="_blank" rel="noopener" style="color: var(--cream);">
+                  linkedin.com/in/woleekanola
+                </a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Contact Form -->
+          <div class="contact-form reveal">
+            <h2>Send a Message</h2>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                />
+                <span class="error-msg" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+                <span class="error-msg" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. 08012345678"
+                  autocomplete="tel"
+                  required
+                />
+                <span class="error-msg" id="phone-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Write your message here (minimum 10 characters)..."
+                  required
+                ></textarea>
+                <span class="error-msg" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+              <button type="reset" class="btn btn-block" style="background: transparent; color: var(--primary); border: 2px solid var(--primary); margin-top: 0.5rem;">
+                Clear Form
+              </button>
+
+              <div class="success-msg" id="success-msg"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Audio section -->
+    <section class="media-section">
+      <div class="container">
+        <h2 class="section-title reveal">Listen: A Quick Note</h2>
+        <p class="section-subtitle reveal">A short audio clip — just for fun.</p>
+        <div style="text-align:center;" class="reveal">
+          <audio controls preload="none">
+            <source src="https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="planner.html">Planner</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/woleEkanola" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/woleekanola" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p>&copy; <span id="current-year"></span> Ekanola Adewole. All Rights Reserved.</p>
+    <p>COS 106 - Introduction to Web Technologies | Term Project</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

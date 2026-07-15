@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ekanola Adewole - Student Portfolio & Academic Management Website" />
+  <title>Ekanola Adewole | Student Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">EA<span>.</span></a>
+        <button class="hamburger" aria-expanded="false">&#9776;</button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="tagline">Hello, I'm</p>
+          <h1>Ekanola Adewole</h1>
+          <p>
+            I'm a fullstack developer and founder based in Lagos, Nigeria. I build ventures
+            that combine technology, education, and youth empowerment — from AI-powered school
+            management platforms to coding academies that train the next generation of software
+            engineers.
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="projects.html" class="btn btn-primary">View My Projects</a>
+            <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://avatars.githubusercontent.com/u/22842809?v=4"
+            alt="Ekanola Adewole - Profile Photo"
+            class="profile-photo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="about-section">
+      <div class="container">
+        <h2 class="section-title reveal">A Little About Me</h2>
+        <p class="section-subtitle reveal">
+          Founder, builder, and lifelong learner.
+        </p>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;" class="reveal">
+          <p>
+            I'm currently pursuing my degree at MIVA Open University while building ventures
+            that serve thousands of users across Africa. My flagship project, Schoolwave,
+            is an AI-powered school management platform powering 20+ schools and 5,000+ users
+            across multiple countries.
+          </p>
+          <p>
+            I also run Techill Academy, a coding bootcamp teaching design, programming, and
+            data science. I'm the author of "What Is In Your Hands," a guide to unlocking youth
+            potential. When I'm not coding, I visit secondary schools across Nigeria teaching
+            life readiness skills to teenagers.
+          </p>
+          <a href="about.html" class="btn btn-primary" style="margin-top:1rem;">Read More About Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro video -->
+    <section class="media-section">
+      <div class="container">
+        <h2 class="section-title reveal">A Quick Introduction</h2>
+        <p class="section-subtitle reveal">Watch a short welcome message from me.</p>
+        <div class="video-wrapper reveal">
+          <video controls poster="https://picsum.photos/seed/intro/800/450" preload="metadata">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section style="background: var(--white);">
+      <div class="container">
+        <h2 class="section-title reveal">What I Do</h2>
+        <p class="section-subtitle reveal">Building technology that serves real people.</p>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+          <div class="skill-card reveal">
+            <h3>Web Development</h3>
+            <p>Fullstack development with JavaScript, React, Next.js, Python, and Flask — building responsive, production-ready applications.</p>
+          </div>
+          <div class="skill-card reveal">
+            <h3>AI &amp; Automation</h3>
+            <p>Helping businesses automate operations and reduce costs using emerging AI tools and custom systems that drive sustainable growth.</p>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Youth Empowerment</h3>
+            <p>Visiting schools across Nigeria, teaching life readiness — clarity, discipline, and purpose — through workshops and accelerator programmes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="planner.html">Planner</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/woleEkanola" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/woleekanola" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p>&copy; <span id="current-year"></span> Ekanola Adewole. All Rights Reserved.</p>
+    <p>COS 106 - Introduction to Web Technologies | Term Project</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

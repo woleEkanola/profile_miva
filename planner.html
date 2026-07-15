@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Academic Planner - manage your tasks, deadlines, and study schedule." />
+  <title>Academic Planner | Ekanola Adewole</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">EA<span>.</span></a>
+        <button class="hamburger" aria-expanded="false">&#9776;</button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="planner.html" class="nav-link">Planner</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Academic Planner</h1>
+      <p>Organise your tasks, deadlines, and study goals. Your data is saved in your browser.</p>
+    </section>
+
+    <section class="planner-section">
+      <div class="container">
+        <div class="planner-container">
+
+          <!-- Add Task Form -->
+          <div class="planner-form-card reveal">
+            <h2>Add a New Task</h2>
+            <form id="task-form" novalidate>
+              <div class="form-group">
+                <label for="task-input">Task Title *</label>
+                <input
+                  type="text"
+                  id="task-input"
+                  name="title"
+                  placeholder="e.g. Read Chapter 4 of Web Tech notes"
+                  required
+                  maxlength="120"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="task-date">Due Date</label>
+                <input
+                  type="date"
+                  id="task-date"
+                  name="dueDate"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" name="priority">
+                  <option value="low">Low</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="high">High</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">+ Add Task</button>
+            </form>
+          </div>
+
+          <!-- Task List -->
+          <div class="planner-list-card reveal">
+            <h2>Your Tasks</h2>
+
+            <div class="planner-filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="pending">Pending</button>
+              <button class="filter-btn" data-filter="completed">Completed</button>
+              <button id="clear-completed" class="filter-btn" style="margin-left:auto; border-color:#c0392b; color:#c0392b;">
+                Clear Completed
+              </button>
+            </div>
+
+            <p id="task-counter" style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem;">
+              Loading tasks...
+            </p>
+
+            <ul id="task-list" class="task-list">
+              <!-- Tasks rendered by JavaScript -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section style="background: var(--cream);">
+      <div class="container">
+        <h2 class="section-title reveal">Productivity Tips</h2>
+        <p class="section-subtitle reveal">A few ideas to make the most of your planner.</p>
+
+        <ul style="max-width:700px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8;" class="reveal">
+          <li><strong>Break it down:</strong> Divide large assignments into smaller, manageable tasks.</li>
+          <li><strong>Set priorities:</strong> Tackle high-priority items first when your energy is highest.</li>
+          <li><strong>Use due dates:</strong> Even rough estimates help you stay on track.</li>
+          <li><strong>Review daily:</strong> Spend 5 minutes each morning planning your day.</li>
+          <li><strong>Celebrate wins:</strong> Tick off completed tasks to feel a sense of progress.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="planner.html">Planner</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/woleEkanola" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/woleekanola" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p>&copy; <span id="current-year"></span> Ekanola Adewole. All Rights Reserved.</p>
+    <p>COS 106 - Introduction to Web Technologies | Term Project</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
