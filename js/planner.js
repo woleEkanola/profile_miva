@@ -120,12 +120,26 @@ function renderTasks() {
   }
   if (taskCounter) {
     taskCounter.textContent = total === 0
-      ? 'No tasks yet'
+      ? 'Start by adding your first task using the form on the left.'
       : pending + ' pending of ' + total + ' total';
   }
 
+  if (filtered.length === 0 && total === 0) {
+    taskList.innerHTML = '<li class="empty-state" style="padding:2rem;text-align:left;font-style:normal;">' +
+      '<p style="font-weight:600;margin-bottom:0.75rem;color:var(--primary);">How to use the planner:</p>' +
+      '<p>1. Type a task title in the form on the left.</p>' +
+      '<p>2. Optionally set a due date and choose a priority level (Low, Medium, or High).</p>' +
+      '<p>3. Click <strong>+ Add Task</strong> to save it. Your tasks are stored in your browser.</p>' +
+      '<p>4. Use the <strong>checkbox</strong> to mark a task as completed.</p>' +
+      '<p>5. Click <strong>Delete</strong> to remove a task permanently.</p>' +
+      '<p>6. Use the <strong>All / Pending / Completed</strong> buttons to filter your view.</p>' +
+      '<p>7. Click <strong>Clear Completed</strong> to remove all finished tasks at once.</p>' +
+      '</li>';
+    return;
+  }
+
   if (filtered.length === 0) {
-    taskList.innerHTML = '<li class="empty-state">No tasks to show. Add one above to get started!</li>';
+    taskList.innerHTML = '<li class="empty-state">No tasks match this filter.</li>';
     return;
   }
 
@@ -239,27 +253,4 @@ if (clearCompletedBtn) {
 
 // Initial render
 loadTasks();
-
-if (tasks.length === 0) {
-  tasks = [
-    {
-      id: generateId(),
-      title: 'Complete COS 106 Term Project',
-      dueDate: null,
-      priority: 'high',
-      completed: false,
-      createdAt: new Date().toISOString()
-    },
-    {
-      id: generateId(),
-      title: 'Review JavaScript arrays and functions',
-      dueDate: null,
-      priority: 'medium',
-      completed: false,
-      createdAt: new Date().toISOString()
-    }
-  ];
-  saveTasks();
-}
-
 renderTasks();
